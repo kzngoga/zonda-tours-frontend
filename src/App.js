@@ -10,6 +10,7 @@ import Dashboard from './views/admin/Dashboard';
 import AddBus from './views/admin/AddBus';
 import ViewBuses from './views/admin/ViewBuses';
 import AddTicket from './views/admin/AddTicket';
+import ViewTickets from './views/admin/ViewTickets';
 
 import NotFound from './views/NotFound';
 
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/buses/new" component={AddBus} />
           <Route exact path="/buses/all" component={ViewBuses} />
           <Route exact path="/tickets/new" component={AddTicket} />
+          <Route exact path="/tickets/all" component={ViewTickets} />
 
           <Route exact path="/*" component={NotFound} />
         </Switch>
