@@ -39,7 +39,7 @@ const Table = ({ data = [], refetch }) => {
 };
 
 Table.propTypes = {
-  resultsData: PropTypes.arrayOf(
+  data: PropTypes.arrayOf(
     PropTypes.objectOf(
       PropTypes.oneOfType([PropTypes.number, PropTypes.string])
     )
