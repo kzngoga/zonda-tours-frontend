@@ -4,17 +4,26 @@ import { Provider } from 'react-redux';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import store from './redux/store';
 import Login from './views/Login';
+import Dashboard from './views/admin/Dashboard';
+
+import NotFound from './views/NotFound';
 
 library.add(fab, fas);
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Login} />
-      </Switch>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/admin" component={Dashboard} />
+
+          <Route exact path="/*" component={NotFound} />
+        </Switch>
+      </Router>
+    </Provider>
   );
 }
 
