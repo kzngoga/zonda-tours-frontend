@@ -79,7 +79,7 @@ const SideBar = ({ logoutAction: logout, admin }) => {
             <NavLink
               exact
               className="nav-link"
-              to="/tickets/all"
+              to="/tickets/new"
               activeClassName="active"
             >
               <span className="">

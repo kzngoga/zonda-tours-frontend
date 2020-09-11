@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import SideBar from '../../components/Sidebar';
 import Loader from '../../components/Loader';
 import DisplayError from '../../components/DisplayError';
-import Table from '../../components/tables/BusesTable';
+import AddTicketForm from '../../components/AddTicketForm';
 import fetchBusesAction from '../../redux/actions/bus/fetchBuses';
 
 const Dashboard = ({ fetchBusesAction: fetchAction, fetchBuses }) => {
@@ -106,11 +106,11 @@ const Dashboard = ({ fetchBusesAction: fetchAction, fetchBuses }) => {
             style={{ backgroundColor: '#f6f5fa' }}
           >
             <h4 className=" font-weight-bold mt-4" style={{ fontSize: 18 }}>
-              All Registered Buses
+              Register Ticket
             </h4>
             <div className="container-fluid mt-5">
               <DisplayData>
-                <Table data={resultsData} refetch={refetch} />
+                <AddTicketForm data={resultsData} />
               </DisplayData>
             </div>
           </main>

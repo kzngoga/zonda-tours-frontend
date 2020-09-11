@@ -19,7 +19,6 @@ const DisplayError = ({ marginTop, title, desc }) => {
 
 DisplayError.propTypes = {
   marginTop: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
 };
