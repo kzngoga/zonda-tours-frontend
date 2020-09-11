@@ -1,0 +1,40 @@
+.form-div {
+  padding-top: 8%;
+  width: 30%;
+  margin: auto;
+}
+
+.my-input {
+  color: $secondary;
+  height: 42px;
+  padding-left: 10px;
+  &:focus {
+    border-color: #ced4da !important;
+    outline: none !important;
+  }
+  &::placeholder {
+    color: #9496a8;
+    font-size: 14px;
+  }
+}
+
+.my-pwd-input {
+  border-right: none !important;
+}
+
+form label {
+  color: $dark;
+  font-size: 14.5px;
+  font-weight: bold;
+}
+
+.prepend-style {
+  border-right: none !important;
+  transition: all 0.3s !important;
+  border-color: $success;
+}
+
+.append-style {
+  transition: all 0.3s !important;
+  border-left: none !important;
+}
