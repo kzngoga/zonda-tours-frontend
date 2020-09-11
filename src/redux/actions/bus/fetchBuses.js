@@ -3,10 +3,15 @@ import {
   FETCH_BUSES_SUCCESS,
   FETCH_BUSES_FAILED,
   CLEAR_BUSES_FAILED,
+  CLEAR_UPDATE_BUS,
 } from '../../actionTypes';
 
 export default () => async (dispatch) => {
   try {
+    dispatch({
+      type: CLEAR_UPDATE_BUS,
+    });
+
     dispatch({
       type: CLEAR_BUSES_FAILED,
     });

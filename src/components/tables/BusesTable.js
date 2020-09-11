@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import UpdateBus from '../modals/UpdateBus';
 
 const Table = ({ data = [], refetch }) => {
   return (
@@ -20,7 +21,9 @@ const Table = ({ data = [], refetch }) => {
                 <td>{index + 1}</td>
                 <td>{elt.plateNo}</td>
                 <td>{elt.seats}</td>
-                <td>Edit</td>
+                <td>
+                  <UpdateBus refetch={refetch} data={elt} id={elt._id} />
+                </td>
               </tr>
             ))}
           </tbody>
@@ -31,7 +34,7 @@ const Table = ({ data = [], refetch }) => {
 };
 
 Table.propTypes = {
-  resultsData: PropTypes.arrayOf(
+  data: PropTypes.arrayOf(
     PropTypes.objectOf(
       PropTypes.oneOfType([PropTypes.number, PropTypes.string])
     )
