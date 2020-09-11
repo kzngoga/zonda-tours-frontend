@@ -126,7 +126,7 @@ const Dashboard = ({ addTicket, addTicketAction: addAction, data = [] }) => {
           </div>
         </div>
         <div className="form-group mt-3 col-6">
-          <label htmlFor="seats">Choose Ticket</label>
+          <label htmlFor="seats">Choose Bus</label>
           <div className="input-group">
             <div className="input-group-prepend">
               <span className="prepend-style border-dark bg-dark text-white input-group-text">
