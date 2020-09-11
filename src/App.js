@@ -7,6 +7,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import store from './redux/store';
 import Login from './views/Login';
 import Dashboard from './views/admin/Dashboard';
+import AddBus from './views/admin/AddBus';
+import ViewBuses from './views/admin/ViewBuses';
 
 import NotFound from './views/NotFound';
 
@@ -19,6 +21,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Login} />
           <Route exact path="/admin" component={Dashboard} />
+          <Route exact path="/buses/new" component={AddBus} />
+          <Route exact path="/buses/all" component={ViewBuses} />
 
           <Route exact path="/*" component={NotFound} />
         </Switch>
