@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import SideBar from '../../components/Sidebar';
-import StatCard from '../../components/StatCard';
 
 const Dashboard = () => {
   const history = useHistory();
@@ -24,16 +23,31 @@ const Dashboard = () => {
             style={{ backgroundColor: '#f6f5fa' }}
           >
             <h4 className=" font-weight-bold mt-4" style={{ fontSize: 18 }}>
-              Quick Statistics
+              All Registered Buses
             </h4>
             <div className="container-fluid mt-5">
-              <div className="row">
-                <StatCard
-                  title="All Buses"
-                  count={30}
-                  iconHead="fas"
-                  icon="user-lock"
-                />
+              <div className="table-responsive">
+                <table className="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Firstname</th>
+                      <th scope="col">Lastname</th>
+                      <th scope="col">Email</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>John</td>
+                      <td>Doe</td>
+                      <td>john@example.com</td>
+                    </tr>
+                    <tr>
+                      <td>Mary</td>
+                      <td>Moe</td>
+                      <td>mary@example.com</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </main>
