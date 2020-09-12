@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import DeleteTicket from '../modals/DeleteTicket';
+
 const Table = ({ data = [], refetch }) => {
   return (
     <div className="mt-5">
@@ -28,7 +30,9 @@ const Table = ({ data = [], refetch }) => {
                 <td>{elt.destination}</td>
                 <td>{elt.time}</td>
                 <td>Edit</td>
-                <td>Delete</td>
+                <td>
+                  <DeleteTicket refetch={refetch} id={elt._id} />
+                </td>
               </tr>
             ))}
           </tbody>

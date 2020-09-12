@@ -3,10 +3,15 @@ import {
   FETCH_TICKETS_SUCCESS,
   FETCH_TICKETS_FAILED,
   CLEAR_TICKETS_FAILED,
+  CLEAR_DELETE_TICKETS,
 } from '../../actionTypes';
 
 export default () => async (dispatch) => {
   try {
+    dispatch({
+      type: CLEAR_DELETE_TICKETS,
+    });
+
     dispatch({
       type: CLEAR_TICKETS_FAILED,
     });
