@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import UpdateTicket from '../modals/UpdateTicket';
 
 import DeleteTicket from '../modals/DeleteTicket';
 
@@ -29,9 +30,11 @@ const Table = ({ data = [], refetch }) => {
                 <td>{elt.seatNo}</td>
                 <td>{elt.destination}</td>
                 <td>{elt.time}</td>
-                <td>Edit</td>
                 <td>
                   <DeleteTicket refetch={refetch} id={elt._id} />
+                </td>
+                <td>
+                  <UpdateTicket data={elt} refetch={refetch} id={elt._id} />
                 </td>
               </tr>
             ))}

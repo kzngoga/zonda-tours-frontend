@@ -1,9 +1,9 @@
-import axios, { config } from '..';
+import axios from '..';
 import { ADMIN_LOGIN_SUCCESS, ADMIN_LOGIN_FAILED } from '../../actionTypes';
 
 export default (body) => async (dispatch) => {
   try {
-    const response = await axios.post('/api/v1/admin/login', body, config);
+    const response = await axios.post('/api/v1/admin/login', body);
 
     const {
       data: {
